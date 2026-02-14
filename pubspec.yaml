@@ -1,0 +1,67 @@
+name: nur_vakti
+description: "Nur Vakti - İslami Yaşam Uygulaması"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Design
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.17
+  lottie: ^3.3.1
+  shimmer: ^3.0.0
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # Navigation
+  go_router: ^14.8.1
+
+  # Networking
+  dio: ^5.7.0
+
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.5.3
+
+  # Date & Time
+  intl: ^0.19.0
+  hijri: ^3.0.0
+
+  # Location & Maps
+  geolocator: ^13.0.3
+
+  # Notifications
+  flutter_local_notifications: ^18.0.1
+
+  # Sharing
+  share_plus: ^10.1.4
+
+  # Utils
+  uuid: ^4.5.1
+  path_provider: ^2.1.5
+  url_launcher: ^6.3.1
+  vibration: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.15
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/icons/
