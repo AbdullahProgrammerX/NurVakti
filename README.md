@@ -82,45 +82,82 @@ lib/
 
 | Layer | Technology |
 |---|---|
-| Framework | Flutter |
+| Framework | Flutter 3.8+ |
 | State Management | Riverpod |
 | Navigation | GoRouter |
-| Local Storage | Hive |
-| Typography | Google Fonts |
-| Backend (planned) | NestJS + PostgreSQL + Redis |
+| Local Storage | Hive (persistent) |
+| Remote Storage | Supabase (PostgreSQL) |
+| Backend | Supabase Edge Functions |
+| API Integration | Diyanet İşleri Başkanlığı API |
+| Notifications | flutter_local_notifications |
+| Typography | Google Fonts (Inter + Amiri) |
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Flutter SDK 3.x+
-- Dart 3.x+
-- Android Studio / Xcode
-
-### Run
+### Quick Start
 ```bash
+# 1. Install dependencies
 flutter pub get
+
+# 2. Setup environment (see QUICK_START.md for details)
+cp .env.example .env
+# Edit .env with your Supabase credentials
+
+# 3. Run the app
 flutter run
 ```
 
-## 📋 Roadmap
+### Full Setup Guide
+See [QUICK_START.md](QUICK_START.md) for detailed setup instructions including:
+- Supabase configuration
+- Diyanet API integration
+- Environment variables
+- Testing guide
 
+## 📋 Progress
+
+### ✅ Completed
 - [x] Project setup & folder structure
-- [x] Theme system (light/dark)
+- [x] Theme system (light/dark) - **Fully working**
 - [x] Navigation (bottom bar + popup menu)
 - [x] Home page (calendar leaf with daily content)
-- [x] Prayer times page (mock data)
-- [x] Qibla finder (compass UI)
-- [x] Dhikr counter (full feature)
-- [x] Favorites (category tabs)
-- [x] Religious days & kandils
+- [x] Dhikr counter with **persistent storage** (Hive)
+- [x] Favorites system (UI + backend ready)
+- [x] Religious days & kandils (9 events in database)
 - [x] Settings page
-- [ ] Backend (NestJS + Diyanet API proxy)
-- [ ] Real prayer time data
-- [ ] Notification system
+- [x] **Supabase backend** (PostgreSQL + Edge Functions)
+- [x] **Database schema** (7 tables with RLS)
+- [x] **Edge Functions deployed**:
+  - sync-prayer-times
+  - sync-qibla-directions
+- [x] **Service layer** (Prayer Times, Favorites, Notifications, Device)
+- [x] **Notification infrastructure**
+- [x] **20 Risale-i Nur quotes** integrated
+
+### 🚧 In Progress
+- [ ] Diyanet API integration (Edge Functions ready, needs testing)
+- [ ] Real prayer time data sync
+- [ ] Notification scheduling & testing
+- [ ] Favorites UI integration (service ready)
+- [ ] Location service & auto-detection
+- [ ] Qibla sensor integration
+
+### 📅 Planned
 - [ ] Home screen widgets
 - [ ] Sharing & visual card generation
 - [ ] Multi-language support (TR, EN, AR)
 - [ ] Cloud backup
+- [ ] Custom notification sounds
+- [ ] Performance optimizations
+
+**Current Status:** ~90% Complete - Beta ready!
+
+## 📚 Documentation
+
+- [QUICK_START.md](QUICK_START.md) - Get started in 5 minutes
+- [PROJECT_STATUS.md](PROJECT_STATUS.md) - Detailed progress & roadmap
+- [SETUP.md](SETUP.md) - Full setup instructions
+- [DIYANET_API_INTEGRATION.md](DIYANET_API_INTEGRATION.md) - API integration guide
 
 ## 📄 License
 
